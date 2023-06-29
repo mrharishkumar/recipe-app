@@ -72,11 +72,15 @@ const SimpleList = ({ tabs, width }: SimpleListProps) => {
         sx={{
           borderRight: 1,
           borderColor: "divider",
-          width: width ? width : "200px",
         }}
       >
         {tabs.map((item, idx) => (
-          <Tab label={item.label} key={idx} {...a11yProps(idx)} />
+          <Tab
+            sx={{ width: width ? width : "200px" }}
+            label={item.label}
+            key={idx}
+            {...a11yProps(idx)}
+          />
         ))}
       </Tabs>
       {tabs.map((item, idx) => (
