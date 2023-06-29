@@ -17,6 +17,7 @@ export interface TabDetail {
 
 export interface SimpleListProps {
   tabs: TabDetail[];
+  width?: string;
 }
 
 const TabPanel = (props: TabPanelProps) => {
@@ -46,7 +47,7 @@ const a11yProps = (index: number) => {
   };
 };
 
-const SimpleList = ({ tabs }: SimpleListProps) => {
+const SimpleList = ({ tabs, width }: SimpleListProps) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -68,7 +69,7 @@ const SimpleList = ({ tabs }: SimpleListProps) => {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs"
-        sx={{ borderRight: 1, borderColor: "divider" }}
+        sx={{ borderRight: 1, borderColor: "divider", width: width || "200px" }}
       >
         {tabs.map((item, idx) => (
           <Tab label={item.label} key={idx} {...a11yProps(idx)} />
