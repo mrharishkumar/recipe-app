@@ -71,11 +71,11 @@ const SimpleList = ({ tabs }: SimpleListProps) => {
         sx={{ borderRight: 1, borderColor: "divider" }}
       >
         {tabs.map((item, idx) => (
-          <Tab label={item.label} {...a11yProps(idx)} />
+          <Tab label={item.label} key={idx} {...a11yProps(idx)} />
         ))}
       </Tabs>
       {tabs.map((item, idx) => (
-        <TabPanel value={value} index={idx}>
+        <TabPanel value={value} key={idx} index={idx}>
           {item.component as React.ReactNode}
         </TabPanel>
       ))}
