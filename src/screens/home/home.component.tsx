@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import Brand from "../../components/brand/brand.component";
 import SimpleList from "../../components/simpleList/simpleList.component";
+import { RecipeList } from "../../components/recipeList/recipeList";
 
 const Home = () => {
   return (
@@ -11,11 +12,11 @@ const Home = () => {
       <Grid item>
         <SimpleList
           tabs={[
-            { label: "Tags", component: <>Hello</> },
-            { label: "Tags", component: <>Hello</> },
-            { label: "Tags", component: <>Hello</> },
-            { label: "Tags", component: <>Hello</> },
-            { label: "Tags", component: <>Hello</> },
+            { label: "Tags", component: <RecipeList /> },
+            { label: "Tags", component: <RecipeList /> },
+            { label: "Tags", component: <RecipeList /> },
+            { label: "Tags", component: <RecipeList /> },
+            { label: "Tags", component: <RecipeList /> },
           ]}
         />
       </Grid>

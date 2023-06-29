@@ -14,9 +14,9 @@ import {
 export const RecipeDetails = () => {
   return (
     <>
-      <Grid container sx={{ mt: 2 }}>
-        <Grid item xs={3}>
-          <Typography variant="h4" component="h2">
+      <Grid container xs={12}>
+        <Grid item xs={4}>
+          <Typography variant="h5" component="h2">
             Recipe Detail
           </Typography>
         </Grid>
@@ -24,14 +24,14 @@ export const RecipeDetails = () => {
 
       <Box
         sx={{
-          width: 1800,
+          width: 700,
         }}
       >
-        <Grid container spacing={2} sx={{ mt: 4 }}>
-          <Grid item xs={1}>
+        <Grid container xs={12} spacing={2} sx={{ mt: 4 }}>
+          <Grid item xs={4}>
             <Typography>Recipe Name</Typography>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={8}>
             <TextField
               label="Recipe Name"
               required
@@ -43,11 +43,11 @@ export const RecipeDetails = () => {
             />
           </Grid>
         </Grid>
-        <Grid container spacing={2}>
-          <Grid item xs={1}>
+        <Grid container spacing={2} xs={12}>
+          <Grid item xs={4}>
             <Typography>Recipe Id</Typography>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={8}>
             <TextField
               label="Recipe Id"
               required
@@ -59,11 +59,11 @@ export const RecipeDetails = () => {
             />
           </Grid>
         </Grid>
-        <Grid container spacing={2}>
-          <Grid item xs={1}>
+        <Grid container spacing={2} xs={12}>
+          <Grid item xs={4}>
             <Typography>Switness Level</Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={8}>
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Age</InputLabel>
               <Select
@@ -78,16 +78,16 @@ export const RecipeDetails = () => {
             </FormControl>
           </Grid>
         </Grid>
-        <Grid container spacing={2} sx={{ mt: 2 }}>
-          <Grid item xs={1}>
+        <Grid container spacing={2} sx={{ mt: 2 }} xs={12}>
+          <Grid item xs={4}>
             <Typography>More Tags</Typography>
           </Grid>
-          <Grid item xs={1}>
+          <Grid item xs={8}>
             <Chip label="Shaii paneer" />
           </Grid>
         </Grid>
-        <Grid container spacing={2} sx={{ mt: 5 }}>
-          <Grid item xs={1}>
+        <Grid container spacing={2} sx={{ mt: 5 }} xs={12}>
+          <Grid item xs={4}>
             <Button variant="contained" type="submit">
               Login
             </Button>
