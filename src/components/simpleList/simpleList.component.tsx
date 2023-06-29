@@ -69,7 +69,11 @@ const SimpleList = ({ tabs, width }: SimpleListProps) => {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs"
-        sx={{ borderRight: 1, borderColor: "divider", width: width || "200px" }}
+        sx={{
+          borderRight: 1,
+          borderColor: "divider",
+          width: width ? width : "200px",
+        }}
       >
         {tabs.map((item, idx) => (
           <Tab label={item.label} key={idx} {...a11yProps(idx)} />
