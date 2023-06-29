@@ -10,13 +10,13 @@ interface TabPanelProps {
   value: number;
 }
 
-export interface Tab {
+export interface TabDetail {
   label: string;
   component: React.ReactNode;
 }
 
 export interface SimpleListProps {
-  tabs: Tab[];
+  tabs: TabDetail[];
 }
 
 const TabPanel = (props: TabPanelProps) => {
