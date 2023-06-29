@@ -18,6 +18,7 @@ export interface TabDetail {
 export interface SimpleListProps {
   tabs: TabDetail[];
   width?: string;
+  scrollable?: boolean;
 }
 
 const TabPanel = (props: TabPanelProps) => {
@@ -47,7 +48,7 @@ const a11yProps = (index: number) => {
   };
 };
 
-const SimpleList = ({ tabs, width }: SimpleListProps) => {
+const SimpleList = ({ tabs, width, scrollable }: SimpleListProps) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -60,12 +61,13 @@ const SimpleList = ({ tabs, width }: SimpleListProps) => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        height: "100%",
+        maxHeight: scrollable ? "70vh" : "100%",
       }}
     >
       <Tabs
         orientation="vertical"
-        variant="standard"
+        variant="scrollable"
+        scrollButtons={false}
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs"
