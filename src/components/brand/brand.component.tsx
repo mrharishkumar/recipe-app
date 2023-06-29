@@ -16,7 +16,7 @@ const Brand = ({ align, width, padding }: BrandProps) => {
   };
   return (
     <div style={{ width: width || "100vw" }}>
-      <img style={style} src={logo} alt="aramark-logo" />
+      <img style={style} src={logo} alt="aramark-logo" width={"100px"} />
     </div>
   );
 };
