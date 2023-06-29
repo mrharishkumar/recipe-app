@@ -3,15 +3,10 @@ import SimpleList from "../simpleList/simpleList.component";
 import { RecipeDetails } from "../recipeDetail/recipeDetail";
 
 export interface IRecipeList {
-  name: string;
-  recipe: string;
+  recipe_name: string;
+  recipe_id: string;
+  sweetness_level: string;
 }
-
-const recipeDetails = {
-  name: "hero",
-  id: "patanahi",
-  sweetnessLevel: "low",
-};
 
 export interface RecipeListProps {
   recipeList: IRecipeList[];
@@ -31,13 +26,14 @@ export const RecipeList = ({ recipeList }: RecipeListProps) => {
         <Grid>
           <SimpleList
             width="200px"
+            scrollable
             tabs={recipeList.map((recipe) => ({
-              label: recipe.name,
+              label: recipe.recipe_name,
               component: (
                 <RecipeDetails
-                  name={recipeDetails.name}
-                  id={recipeDetails.id}
-                  sweetnessLevel={recipeDetails.sweetnessLevel}
+                  name={recipe.recipe_name}
+                  id={recipe.recipe_id}
+                  sweetnessLevel={recipe.sweetness_level}
                 />
               ),
             }))}
