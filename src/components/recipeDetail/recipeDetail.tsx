@@ -11,12 +11,22 @@ import {
   Typography,
 } from "@mui/material";
 
-export const RecipeDetails = () => {
+export interface RecipeDetailsProps {
+  name: string;
+  id: string;
+  sweetnessLevel: string;
+}
+
+export const RecipeDetails = ({
+  name,
+  id,
+  sweetnessLevel,
+}: RecipeDetailsProps) => {
   return (
     <>
-      <Grid container xs={12}>
+      <Grid container xs={12} sx={{ mt: -11 }}>
         <Grid item xs={4}>
-          <Typography variant="h5" component="h2">
+          <Typography variant="h6" component="h2">
             Recipe Detail
           </Typography>
         </Grid>
@@ -34,11 +44,13 @@ export const RecipeDetails = () => {
           <Grid item xs={8}>
             <TextField
               label="Recipe Name"
+              value={name}
+              size="small"
               required
               variant="outlined"
               color="secondary"
               type="text"
-              sx={{ mb: 3 }}
+              sx={{ mb: 2 }}
               fullWidth
             />
           </Grid>
@@ -50,30 +62,35 @@ export const RecipeDetails = () => {
           <Grid item xs={8}>
             <TextField
               label="Recipe Id"
+              size="small"
+              value={id}
               required
               variant="outlined"
               color="secondary"
               type="text"
               fullWidth
-              sx={{ mb: 3 }}
+              sx={{ mb: 2 }}
             />
           </Grid>
         </Grid>
         <Grid container spacing={2} xs={12}>
           <Grid item xs={4}>
-            <Typography>Switness Level</Typography>
+            <Typography>Sweetness Level</Typography>
           </Grid>
           <Grid item xs={8}>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+              <InputLabel id="select-label" size="small">
+                {sweetnessLevel}
+              </InputLabel>
               <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
+                labelId="select-label"
+                size="small"
+                id="select"
                 label="Recipe Nature"
+                disabled
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value={20}>Low</MenuItem>
+                <MenuItem value={30}>Medium</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -83,13 +100,13 @@ export const RecipeDetails = () => {
             <Typography>More Tags</Typography>
           </Grid>
           <Grid item xs={8}>
-            <Chip label="Shaii paneer" />
+            <Chip label="Shahi paneer" />
           </Grid>
         </Grid>
         <Grid container spacing={2} sx={{ mt: 5 }} xs={12}>
           <Grid item xs={4}>
             <Button variant="contained" type="submit">
-              Login
+              Save
             </Button>
           </Grid>
         </Grid>
