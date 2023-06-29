@@ -5,11 +5,24 @@ import {
   RecipeList,
   IRecipeList,
 } from "../../components/recipeList/recipeList";
+import TAGS from "../../tags_data";
 
 const recipeList: IRecipeList[] = [
-  { name: "recipe", recipe: "recipe" },
-  { name: "recipe1", recipe: "recipe1" },
-  { name: "recipe2", recipe: "recipe2" },
+  {
+    recipe_name: "recipe",
+    recipe_id: "dunno",
+    sweetness_level: "low",
+  },
+  {
+    recipe_name: "recipe1",
+    recipe_id: "dunno",
+    sweetness_level: "low",
+  },
+  {
+    recipe_name: "recipe2",
+    recipe_id: "dunno",
+    sweetness_level: "low",
+  },
 ];
 
 const Home = () => {
@@ -23,7 +36,7 @@ const Home = () => {
           tabs={[
             {
               label: "Tags",
-              component: <RecipeList recipeList={recipeList} />,
+              component: <RecipeList recipeList={TAGS as IRecipeList[]} />,
             },
             {
               label: "Recomendations",
