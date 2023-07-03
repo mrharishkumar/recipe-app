@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/recipe-app/static/css/main.964fdded.css",
-    "main.js": "/recipe-app/static/js/main.d9cf60e5.js",
+    "main.js": "/recipe-app/static/js/main.afefe72c.js",
     "static/js/787.13aee4be.chunk.js": "/recipe-app/static/js/787.13aee4be.chunk.js",
     "static/media/aramark_logo.jpg": "/recipe-app/static/media/aramark_logo.74f9d66445d98a4bbc8e.jpg",
     "index.html": "/recipe-app/index.html",
     "main.964fdded.css.map": "/recipe-app/static/css/main.964fdded.css.map",
-    "main.d9cf60e5.js.map": "/recipe-app/static/js/main.d9cf60e5.js.map",
+    "main.afefe72c.js.map": "/recipe-app/static/js/main.afefe72c.js.map",
     "787.13aee4be.chunk.js.map": "/recipe-app/static/js/787.13aee4be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.d9cf60e5.js"
+    "static/js/main.afefe72c.js"
   ]
 }
